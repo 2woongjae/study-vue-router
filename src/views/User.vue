@@ -1,8 +1,6 @@
 <template>
     <div>
-        <p>$route.params.id : {{$route.params.id}}</p>
-        <p>$route.query.id : {{$route.query.id}}</p>
-
+        <p>{{ id }}</p>
         <ul>
             <li><button @click="click1">리터럴 string 이동</button></li>
             <li><button @click="click2">object 이동 - path</button></li>
@@ -17,11 +15,14 @@
     </div>
 </template>
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue, Prop } from "vue-property-decorator";
 import { Route } from "vue-router";
 
 @Component
 export default class User extends Vue {
+  @Prop()
+  id!: string;
+
   created() {
     console.log("created");
     console.log(this.$route.params.id);

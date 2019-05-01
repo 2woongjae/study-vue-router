@@ -25,6 +25,7 @@ export default new Router({
       path: "/user/:id",
       name: "user",
       component: User,
+      props: true,
       children: [
         {
           path: "profile",
@@ -34,7 +35,8 @@ export default new Router({
     },
     {
       path: "/user",
-      component: User
+      component: User,
+      props: { id: "lucky" }
     }
   ]
 });
