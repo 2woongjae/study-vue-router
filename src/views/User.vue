@@ -2,6 +2,8 @@
     <div>
         <p>$route.params.id : {{$route.params.id}}</p>
         <p>$route.query.id : {{$route.query.id}}</p>
+
+        <router-view to="/profile"></router-view>
     </div>
 </template>
 <script lang="ts">

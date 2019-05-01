@@ -5,7 +5,8 @@
       <router-link to="/about">About</router-link> |
 			<router-link to="/user/mark">User params (mark)</router-link> |
       <router-link to="/user/anna">User params (anna)</router-link> |
-			<router-link to="/user?id=mark">User query (mark)</router-link>
+			<router-link to="/user?id=mark">User query (mark)</router-link> |
+      <router-link to="/user/mark/profile">User Profile (mark)</router-link>
 		</div>
     <router-view/>
   </div>

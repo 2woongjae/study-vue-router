@@ -3,6 +3,7 @@ import Router from "vue-router";
 
 import Home from "./views/Home.vue";
 import User from "./views/User.vue";
+import Profile from "./views/Profile.vue";
 
 Vue.use(Router);
 
@@ -22,7 +23,13 @@ export default new Router({
     },
     {
       path: "/user/:id",
-      component: User
+      component: User,
+      children: [
+        {
+          path: "profile",
+          component: Profile
+        }
+      ]
     },
     {
       path: "/user",
